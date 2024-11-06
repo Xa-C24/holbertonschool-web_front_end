@@ -39,7 +39,7 @@ html {
     --section-header-align: center;
 
     /* Transformer le texte en majuscules */
-    --section-tagline_transform: uppercase;
+    --section-tagline-transform: uppercase;
 
     /* Marges et couleur pour les titres de section */
     --section-title-margin: 0;
@@ -64,6 +64,15 @@ a {
 /* Appliquer l'alignement au .section-header */
 .section-header {
     text-align: var(--section-header-align); /* Task 10 : Centrer horizontalement les titres */
+}
+
+/* Task 12 : Styliser .section-title */
+.section-title {
+    font-family: var(--font-family-title); /* Police de titre */
+    font-size: var(--font-size-xx-large); /* Taille de police */
+    font-weight: var(--font-weight-bold); /* Texte en gras */
+    margin: var(--section-title-margin); /* Marges */
+    color: var(--section-title-color); /* Couleur du texte */
 }
 
 /* Appliquer color-primary aux éléments section-tagline et card-category */
