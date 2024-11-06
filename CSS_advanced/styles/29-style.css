@@ -21,6 +21,8 @@ html {
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
 
+    --nav-item-link-hover: var(--color-white); /* Modification pour task 29 */
+
     /* Polices avec les ordres corrigés */
     --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
