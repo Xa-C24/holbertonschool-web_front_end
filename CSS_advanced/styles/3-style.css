@@ -1,0 +1,36 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Définition des propriétés personnalisées dans :root */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+}
+
+/* Appliquer les couleurs définies */
+body {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+}
+
+/* Appliquer color-primary aux éléments section-tagline et card-category */
+.section-tagline {
+    color: var(--color-primary);
+}
+
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Cacher tous les éléments ayant la classe .visually-hidden */
+.visually-hidden {
+    display: none;
+}
