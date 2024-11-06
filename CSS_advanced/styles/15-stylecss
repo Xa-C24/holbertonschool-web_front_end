@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* Task 15 : Appliquer box-sizing universel */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* Task 5 : Réduire la taille de police par défaut à 62.5% */
+}
+
+/* Définition des propriétés personnalisées dans :root */
+:root {
+    /* Couleurs */
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+
+    /* Polices avec les ordres corrigés */
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Tailles de police */
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+
+    /* Hauteurs de ligne */
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+
+    /* Poids de police */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Alignement des titres de section */
+    --section-header-align: center;
+
+    /* Transformer le texte en majuscules */
+    --section-tagline-transform: uppercase;
+
+    /* Marges et couleur pour les titres de section */
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+}
+
+/* Appliquer les couleurs et polices de base au body */
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium); /* Task 5 : Taille de police par défaut */
+    font-weight: var(--font-weight-regular); /* Task 6 : Poids de police par défaut */
+    line-height: var(--line-height-base); /* Task 8 : Hauteur de ligne par défaut */
+}
+
+/* Style général pour tous les liens */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Style pour les liens visités */
+a:visited {
+    font-style: italic; /* Texte en italique pour les liens visités */
+}
+
+/* Style pour les liens au survol */
+a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+}
+
+/* Style pour les liens actifs */
+a:active {
+    background-color: var(--color-light-grey); /* Fond gris clair pour les liens actifs */
+}
+
+/* Appliquer l'alignement au .section-header */
+.section-header {
+    text-align: var(--section-header-align); /* Task 10 : Centrer horizontalement les titres */
+}
+
+/* Task 12 : Styliser .section-title */
+.section-title {
+    font-family: var(--font-family-title); /* Police de titre */
+    font-size: var(--font-size-xx-large); /* Taille de police */
+    font-weight: var(--font-weight-bold); /* Texte en gras */
+    margin: var(--section-title-margin); /* Marges */
+    color: var(--section-title-color); /* Couleur du texte */
+}
+
+/* Appliquer color-primary aux éléments section-tagline et card-category */
+.section-tagline,
+.card-category {
+    font-family: var(--font-family-title); /* Police de titre */
+    text-transform: var(--section-tagline-transform); /* Mettre en majuscules */
+    font-weight: var(--font-weight-bold); /* Texte en gras */
+    color: var(--color-primary);
+}
+
+/* Appliquer la police et le poids en gras aux titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Cacher tous les éléments ayant la classe .visually-hidden */
+.visually-hidden {
+    display: none;
+}
