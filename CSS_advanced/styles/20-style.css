@@ -117,6 +117,20 @@ a:active {
     text-align: var(--section-footer-align);
 }
 
+/* Cibler toutes les classes commençant par "col-" */
+[class^="col-"] {
+    float: left;
+    padding: 0.5rem; /* Correspond à la moitié de l'élément racine */
+}
+
+.col-1-3 {
+    width: 33.33%; /* Prend 1/3 de l'espace du parent */
+}
+
+.col-1-2 {
+    width: 50%; /* Prend 50% de l'espace du parent */
+}
+
 .nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
@@ -171,22 +185,9 @@ a:active {
 }
 
 .row::after {
-    content: "";       /* Pas de contenu */
-    display: table;    /* Affichage en table */
-    clear: both;       /* Efface les flottants des deux côtés */
-}
-
-/* Styles de la grille pour les colonnes */
-.col-1-3 {
-    width: 33.33%;
-    float: left;
-    padding: 0.5rem;
-}
-
-.col-1-2 {
-    width: 50%;
-    float: left;
-    padding: 0.5rem;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .container {
@@ -207,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Alignement des listes dans le footer */
 .footer ul {
-    list-style: none; /* Éviter les puces si nécessaire */
+    list-style: none;
     margin: 0;
     padding: 0;
     text-align: right;
