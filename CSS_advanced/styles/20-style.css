@@ -170,7 +170,7 @@ a:active {
     list-style: none;
 }
 
-row::after {
+.row::after {
     content: "";       /* Pas de contenu */
     display: table;    /* Affichage en table */
     clear: both;       /* Efface les flottants des deux côtés */
