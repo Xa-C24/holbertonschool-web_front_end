@@ -90,16 +90,26 @@ a:active {
     background-color: var(--color-light-grey); /* Fond gris clair pour les liens actifs */
 }
 
+/* Appliquer padding à toutes les sections */
 .section {
     padding: var(--section-padding);
 }
 
-/* Appliquer l'alignement au .section-header */
+/* Padding et alignement pour .section-header */
 .section-header {
-   text-align: var(--section-header-align); /* Task 10 : Centrer horizontalement les titres */
-   .section-header {
     padding: var(--section-header-padding);
+    text-align: var(--section-header-align); /* Task 10 : Centrer horizontalement les titres */
 }
+
+/* Padding pour .section-body */
+.section-body {
+    padding: var(--section-body-padding);
+}
+
+/* Padding et alignement pour .section-footer */
+.section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
 }
 
 /* Task 12 : Styliser .section-title */
@@ -131,6 +141,11 @@ a:active {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
+}
+
+/* Padding pour .footer */
+.footer {
+    padding: var(--footer-padding);
 }
 
 /* Cacher tous les éléments ayant la classe .visually-hidden */
