@@ -60,13 +60,13 @@ html {
     --footer-padding: 5rem 0 1rem;
 
     /* Variables pour les éléments de la barre de navigation */
-    --nav-item-font-family: var(--font-family-title); /* Utilise la police définie pour les titres */
-    --nav-item-font-weight: var(--font-weight-bold); /* Texte en gras */
-    --nav-item-font-size: var(--font-size-medium); /* Taille de police moyenne */
-    --nav-item-letter-spacing: 0.4rem; /* Espace entre les lettres, soit 4% de l'élément racine */
-    --nav-item-display: inline-block; /* Affichage en ligne avec gestion de la taille */
-    --nav-item-margin: 3rem 0 0 0; /* Marge en bas de 3rem et 0 pour les autres côtés */
-    --nav-item-link-hover: var(--color-primary); /* Couleur de survol pour les liens */
+    --nav-item-font-family: var(--font-family-title);
+    --nav-item-font-weight: var(--font-weight-bold);
+    --nav-item-font-size: var(--font-size-medium);
+    --nav-item-letter-spacing: 0.4rem;
+    --nav-item-display: inline-block;
+    --nav-item-margin: 3rem 0 0 0;
+    --nav-item-link-hover: var(--color-primary);
 
     /* Variable pour la marge de .section-tagline */
     --section-tagline-margin: 0;
@@ -76,9 +76,9 @@ html {
 body {
     color: var(--text-color);
     font-family: var(--font-family-base);
-    font-size: var(--font-size-medium); /* Task 5 : Taille de police par défaut */
-    font-weight: var(--font-weight-regular); /* Task 6 : Poids de police par défaut */
-    line-height: var(--line-height-base); /* Task 8 : Hauteur de ligne par défaut */
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
 }
 
 /* Style général pour tous les liens */
@@ -201,6 +201,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Alignement des listes dans le footer */
 .footer ul {
+    list-style: none; /* Éviter les puces si nécessaire */
+    margin: 0;
+    padding: 0;
     text-align: right;
 }
 
