@@ -1,0 +1,225 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* Task 15 : Appliquer box-sizing universel */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* Task 5 : Réduire la taille de police par défaut à 62.5% */
+}
+
+/* Définition des propriétés personnalisées dans :root */
+:root {
+    /* Couleurs */
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+
+    /* Polices avec les ordres corrigés */
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Tailles de police */
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+
+    /* Hauteurs de ligne */
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+
+    /* Poids de police */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Alignement des titres de section */
+    --section-header-align: center;
+
+    /* Transformer le texte en majuscules */
+    --section-tagline-transform: uppercase;
+
+    /* Marges et couleur pour les titres de section */
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+
+    /* Définition des paddings et alignement */
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+
+    /* Variables pour les éléments de la barre de navigation */
+    --nav-item-font-family: var(--font-family-title);
+    --nav-item-font-weight: var(--font-weight-bold);
+    --nav-item-font-size: var(--font-size-medium);
+    --nav-item-letter-spacing: 0.4rem;
+    --nav-item-display: inline-block;
+    --nav-item-margin: 3rem 0 0 0;
+    --nav-item-link-hover: var(--color-primary);
+
+    /* Variable pour la marge de .section-tagline */
+    --section-tagline-margin: 0;
+}
+
+/* Appliquer les couleurs et polices de base au body */
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+}
+
+/* Style général pour tous les liens */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:visited {
+    font-style: italic;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    background-color: var(--color-light-grey);
+}
+
+.section {
+    padding: var(--section-padding);
+}
+
+.section-header {
+    padding: var(--section-header-padding);
+    text-align: var(--section-header-align);
+}
+
+.section-body {
+    padding: var(--section-body-padding);
+}
+
+.section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
+}
+
+/* Cibler toutes les classes commençant par "col-" */
+[class^="col-"] {
+    float: left;
+    padding: 0.5rem; /* Correspond à la moitié de l'élément racine */
+}
+
+.col-1-3 {
+    width: 33.33%; /* Prend 1/3 de l'espace du parent */
+}
+
+.col-1-2 {
+    width: 50%; /* Prend 50% de l'espace du parent */
+}
+
+.nav .nav-item {
+    font-family: var(--nav-item-font-family);
+    font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
+    letter-spacing: var(--nav-item-letter-spacing);
+    display: var(--nav-item-display);
+    margin: var(--nav-item-margin);
+}
+
+.nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav .nav-link:hover {
+    color: var(--nav-item-link-hover);
+}
+
+.navbar-menu {
+    float: right;
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
+}
+
+.section-tagline,
+.card-category {
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin: var(--section-tagline-margin);
+}
+
+/* Styles de grille pour la classe .row */
+.row {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Style pour .footer */
+.footer {
+    padding: var(--footer-padding);
+}
+
+/* Alignement des listes dans le footer */
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.footer-copyright {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+}
+
+.visually-hidden {
+    display: none;
+}
