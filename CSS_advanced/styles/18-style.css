@@ -1,0 +1,197 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* Task 15 : Appliquer box-sizing universel */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* Task 5 : Réduire la taille de police par défaut à 62.5% */
+}
+
+/* Définition des propriétés personnalisées dans :root */
+:root {
+    /* Couleurs */
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+
+    /* Polices avec les ordres corrigés */
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Tailles de police */
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+
+    /* Hauteurs de ligne */
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+
+    /* Poids de police */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Alignement des titres de section */
+    --section-header-align: center;
+
+    /* Transformer le texte en majuscules */
+    --section-tagline-transform: uppercase;
+
+    /* Marges et couleur pour les titres de section */
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+
+    /* Définition des paddings et alignement */
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+
+    /* Variables pour les éléments de la barre de navigation */
+    --nav-item-font-family: var(--font-family-title); /* Utilise la police définie pour les titres */
+    --nav-item-font-weight: var(--font-weight-bold); /* Texte en gras */
+    --nav-item-font-size: var(--font-size-medium); /* Taille de police moyenne */
+    --nav-item-letter-spacing: 0.4rem; /* Espace entre les lettres, soit 4% de l'élément racine */
+    --nav-item-display: inline-block; /* Affichage en ligne avec gestion de la taille */
+    --nav-item-margin: 3rem 0 0 0; /* Marge en bas de 3rem et 0 pour les autres côtés */
+    --nav-item-link-hover: var(--color-primary); /* Couleur de survol pour les liens */
+}
+
+/* Appliquer les couleurs et polices de base au body */
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium); /* Task 5 : Taille de police par défaut */
+    font-weight: var(--font-weight-regular); /* Task 6 : Poids de police par défaut */
+    line-height: var(--line-height-base); /* Task 8 : Hauteur de ligne par défaut */
+}
+
+/* Style général pour tous les liens */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Style pour les liens visités */
+a:visited {
+    font-style: italic; /* Texte en italique pour les liens visités */
+}
+
+/* Style pour les liens au survol */
+a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+}
+
+/* Style pour les liens actifs */
+a:active {
+    background-color: var(--color-light-grey); /* Fond gris clair pour les liens actifs */
+}
+
+/* Appliquer padding à toutes les sections */
+.section {
+    padding: var(--section-padding);
+}
+
+/* Padding et alignement pour .section-header */
+.section-header {
+    padding: var(--section-header-padding);
+    text-align: var(--section-header-align); /* Task 10 : Centrer horizontalement les titres */
+}
+
+/* Padding pour .section-body */
+.section-body {
+    padding: var(--section-body-padding);
+}
+
+/* Padding et alignement pour .section-footer */
+.section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
+}
+
+/* Styliser .nav-item dans .nav */
+.nav .nav-item {
+    font-family: var(--nav-item-font-family); /* Police de titre */
+    font-weight: var(--nav-item-font-weight); /* Gras */
+    font-size: var(--nav-item-font-size); /* Taille de police moyenne */
+    letter-spacing: var(--nav-item-letter-spacing); /* Espace entre les lettres */
+    display: var(--nav-item-display); /* Affichage en ligne */
+    margin: var(--nav-item-margin); /* Marge définie pour espacer chaque élément */
+}
+
+/* Style pour les liens dans .nav (.nav-link) */
+.nav .nav-link {
+    display: block; /* Affichage en bloc pour que les liens prennent toute la zone de clic */
+    padding: 0.5rem 1rem; /* Padding : 0.5 rem en haut/bas, et 1 rem à gauche/droite */
+}
+
+/* Au survol, changer la couleur des liens de navigation */
+.nav .nav-link:hover {
+    color: var(--nav-item-link-hover); /* Couleur primaire définie pour les liens au survol */
+}
+
+/* Permet à la classe navbar-menu de flotter à droite */
+.navbar-menu {
+    float: right;
+}
+
+/* Réinitialiser les marges et les paddings pour la classe nav */
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Supprimer le style de liste (puces) */
+    text-align: center; /* Centrer le texte dans la barre de navigation */
+}
+
+/* Task 12 : Styliser .section-title */
+.section-title {
+    font-family: var(--font-family-title); /* Police de titre */
+    font-size: var(--font-size-xx-large); /* Taille de police */
+    font-weight: var(--font-weight-bold); /* Texte en gras */
+    margin: var(--section-title-margin); /* Marges */
+    color: var(--section-title-color); /* Couleur du texte */
+}
+
+/* Appliquer color-primary aux éléments section-tagline et card-category */
+.section-tagline,
+.card-category {
+    font-family: var(--font-family-title); /* Police de titre */
+    text-transform: var(--section-tagline-transform); /* Mettre en majuscules */
+    font-weight: var(--font-weight-bold); /* Texte en gras */
+    color: var(--color-primary);
+}
+
+/* Styles pour le conteneur */
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Appliquer la police et le poids en gras aux titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Padding pour .footer */
+.footer {
+    padding: var(--footer-padding);
+}
+
+/* Cacher tous les éléments ayant la classe .visually-hidden */
+.visually-hidden {
+    display: none;
+}
