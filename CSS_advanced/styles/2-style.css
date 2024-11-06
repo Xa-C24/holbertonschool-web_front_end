@@ -1,0 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Définir la couleur de premier plan (foreground) pour le body */
+body {
+    color: #161616;
+}
+
+/* Définir la couleur de premier plan pour tous les éléments <a> */
+a {
+    color: #161616;
+}
+
+/* Cacher tous les éléments ayant la classe .visually-hidden */
+.visually-hidden {
+    display: none;
+}
+
+/* Définir la couleur de premier plan pour les éléments avec la classe .card-category */
+.card-category {
+    color: #D73953;
+}
+
+/* Définir la couleur de premier plan pour les éléments avec la classe .section-tagline */
+.section-tagline {
+    color: #D73953;
+}
