@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
 html {
     scroll-behavior: smooth;
     font-size: 62.5%; /* Task 5 : Réduire la taille de police par défaut à 62.5% */
