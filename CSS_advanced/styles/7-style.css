@@ -16,8 +16,8 @@ html {
     --text-color: var(--color-black);
 
     /* Polices */
-    --font-family-base: "Open Sans", Helvetica, Arial, sans-serif;
-    --font-family-title: "Raleway", Helvetica, Arial, sans-serif;
+    --font-family-base: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    --font-family-title: "Raleway", "Helvetica  Neue", Arial, sans-serif;
 
     /* Tailles de police */
     --font-size-small: 1.2rem;
