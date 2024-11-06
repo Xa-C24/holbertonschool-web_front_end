@@ -55,24 +55,24 @@ body {
     line-height: var(--line-height-base); /* Task 8 : Hauteur de ligne par défaut */
 }
 
-/* Cibler uniquement les liens contenant un href */
-a[href] {
+/* Style général pour tous les liens */
+a {
     color: var(--text-color);
     text-decoration: none;
 }
 
 /* Style pour les liens visités */
-a[href]:visited {
+a:visited {
     font-style: italic; /* Texte en italique pour les liens visités */
 }
 
 /* Style pour les liens au survol */
-a[href]:hover {
+a:hover {
     text-decoration: underline; /* Souligner le lien au survol */
 }
 
 /* Style pour les liens actifs */
-a[href]:active {
+a:active {
     background-color: var(--color-light-grey); /* Fond gris clair pour les liens actifs */
 }
 
