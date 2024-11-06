@@ -1,0 +1,71 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Définition des propriétés personnalisées dans :root */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+}
+
+/* Appliquer les couleurs définies */
+body {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+}
+
+/* Appliquer color-primary aux éléments section-tagline et card-category */
+.section-tagline {
+    color: var(--color-primary);
+}
+
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Cacher tous les éléments ayant la classe .visually-hidden */
+.visually-hidden {
+    display: none;
+}
+
+/* Définition des propriétés personnalisées de la police dans :root */
+:root {
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Appliquer la police de base au body */
+body {
+    font-family: var(--font-family-base);
+}
+
+/* Appliquer la police du titre à tous les niveaux de titres (h1 à h6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+}
+
+/* Définir les tailles de police dans :root */
+:root {
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+}
+
+/* Appliquer 62.5% de la taille de police normale à l'élément html */
+html {
+    font-size: 62.5%;
+}
+
+/* Appliquer la taille de police par défaut (font-size-medium) au body */
+body {
+    font-size: var(--font-size-medium);
+}
